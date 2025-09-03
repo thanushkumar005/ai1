@@ -1,4 +1,4 @@
-import streamlit as st
+import gradio as gr
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
@@ -61,4 +61,5 @@ with gr.Blocks() as app:
             quiz_btn.click(quiz_generator, inputs=quiz_input, outputs=quiz_output)
 
 app.launch(share=True)
+
 
